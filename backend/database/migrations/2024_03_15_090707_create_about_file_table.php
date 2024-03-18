@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('institutional_file', function (Blueprint $table) {
+        Schema::create('about_us_file', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('file');
             $table->string('about_id');
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('institutional_file');
+        Schema::dropIfExists('about_us_file');
     }
 };

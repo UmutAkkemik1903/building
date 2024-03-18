@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('completed_project', function (Blueprint $table) {
+        Schema::create('kvkk_offer', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->text('description');
-            $table->string('completed_project');
-            $table->string('worker');
+            $table->string('offer_id');
+            $table->string('kvkk_id');
             $table->string('created_by')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('completed_project');
+        Schema::dropIfExists('kvkk_offer');
     }
 };
